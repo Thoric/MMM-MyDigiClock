@@ -4,7 +4,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff2) format('woff2'), url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff) format('woff');
+  src: url(/modules/MMM-MyDigiClock/fonts/dseg7-classic-latin-700-normal.woff2) format('woff2'), url(/modules/MMM-MyDigiClock/fonts/dseg7-classic-latin-700-normal.woff) format('woff');
   unicode-range: U+0030-0039;
 }
 
@@ -14,20 +14,20 @@
 	100% { text-shadow: -1px 0 2px var(--color-text-dimmed);}
 }
 
-.MyDigClock-grid {
+.MyDigiClock-grid {
     display: block;
     width: 374px;
     justify-content: center; /* Horizontal alignment */
 }
 
-.MyDigClock-date {
+.MyDigiClock-date {
     text-align: center;
     color: var(--color-text);
     font-size: var(--font-size-medium);
     line-height: 1.225;
 }
 
-.MyDigClock-face {
+.MyDigiClock-face {
     position: relative;
     display: block;
     top: -0px;
@@ -37,18 +37,18 @@
     font-weight: 700;
 }
 
-.MyDigClock-time, .MyDigClock-background {
+.MyDigiClock-time, .MyDigClock-background {
     position: absolute; /* Position these absolutely within the clock-format div/class */
     text-align: center;
 }
 
-.MyDigClock-time {
+.MyDigiClock-time {
     z-index: 1; /* Bring active time to the front */
     color: var(--color-text-bright);
     animation: glow 3s ease-in-out infinite; /* Make time glow slightly */
 }
 
-.MyDigClock-background {
+.MyDigiClock-background {
     opacity: .75;
     z-index: 0; /* Send background text to the back */
     color: var(--color-text-dimmed);
