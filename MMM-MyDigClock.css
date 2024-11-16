@@ -1,0 +1,65 @@
+/* DESG7 Web Open Font Format - perfect fit */
+@font-face {
+  font-family: 'DSEG7';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff2) format('woff2'), url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff) format('woff');
+  unicode-range: U+0030-0039;
+}
+
+/* DS-Digital TrueType Font - too small & alignment issues */
+@font-face {
+  font-family: 'DS-Digital';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/modules/MMM-MyDigClock/fonts/DS-DIGIB.TTF) format('truetype');
+  unicode-range: U+0030-0039;
+}
+
+@keyframes glow {
+	0% { text-shadow: 1px 0 2px var(--color-text-dimmed);}
+	50% { text-shadow: 0 1px 10px var(--color-text-glow);}
+	100% { text-shadow: -1px 0 2px var(--color-text-dimmed);}
+}
+
+.MyDigClock-grid {
+    display: block;
+    width: 374px;
+    justify-content: center; /* Horizontal alignment */
+}
+
+.MyDigClock-date {
+    text-align: center;
+    color: var(--color-text);
+    font-size: var(--font-size-medium);
+    line-height: 1.225;
+}
+
+.MyDigClock-face {
+    position: relative;
+    display: block;
+    top: -0px;
+    font-size: 5.5rem;
+    line-height: 1.6;
+    font-family: "DSEG7";
+    font-weight: 700;
+}
+
+.MyDigClock-time, .MyDigClock-background {
+    position: absolute; /* Position these absolutely within the clock-format div/class */
+    text-align: center;
+}
+
+.MyDigClock-time {
+    z-index: 1; /* Bring time to the front */
+    color: var(--color-text-bright);
+    animation: glow 3s ease-in-out infinite; /* Make time glow slightly */
+}
+
+.MyDigClock-background {
+    opacity: .75;
+    z-index: 0; /* Send background text to the back */
+    color: var(--color-text-dimmed);
+}
