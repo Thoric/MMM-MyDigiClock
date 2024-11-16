@@ -1,20 +1,10 @@
-/* DESG7 Web Open Font Format - perfect fit */
+/* DESG7 Web Open Font Format */
 @font-face {
   font-family: 'DSEG7';
   font-style: normal;
   font-display: swap;
   font-weight: 700;
   src: url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff2) format('woff2'), url(/modules/MMM-MyDigClock/fonts/dseg7-classic-latin-700-normal.woff) format('woff');
-  unicode-range: U+0030-0039;
-}
-
-/* DS-Digital TrueType Font - too small & alignment issues */
-@font-face {
-  font-family: 'DS-Digital';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src: url(/modules/MMM-MyDigClock/fonts/DS-DIGIB.TTF) format('truetype');
   unicode-range: U+0030-0039;
 }
 
@@ -53,7 +43,7 @@
 }
 
 .MyDigClock-time {
-    z-index: 1; /* Bring time to the front */
+    z-index: 1; /* Bring active time to the front */
     color: var(--color-text-bright);
     animation: glow 3s ease-in-out infinite; /* Make time glow slightly */
 }
