@@ -1,4 +1,4 @@
-Module.register("MMM-MyDigClock", {
+Module.register("MMM-MyDigiClock", {
 	// Module config defaults.
 	defaults: {
 		showDate: true,
@@ -14,7 +14,7 @@ Module.register("MMM-MyDigClock", {
 
 	// Define styles.
 	getStyles: function() {
-		return ["MMM-MyDigClock.css"];
+		return ["MMM-MyDigiClock.css"];
 	},
 
     // Define start sequence.
@@ -31,17 +31,17 @@ Module.register("MMM-MyDigClock", {
     // Override dom generator.
     getDom: function() {
         const wrapper = document.createElement("div");
-        wrapper.classList.add("MyDigClock-grid");
+        wrapper.classList.add("MyDigiClock-grid");
 
         const dateWrapper = document.createElement("div");
         const clockFormatWrapper = document.createElement("div"); // Wrapper for time and background text
         const timeWrapper = document.createElement("div");
         const clockBackground = document.createElement("div"); // Div for 8888
 
-        dateWrapper.className = "MyDigClock-date"; // Use 'MyDigClock-date'
-        clockFormatWrapper.className = "MyDigClock-face"; // Class for clock format
-        timeWrapper.className = "MyDigClock-time"; // Class for time display
-        clockBackground.className = "MyDigClock-background"; // Updated class for background text
+        dateWrapper.className = "MyDigiClock-date"; // Use 'MyDigiClock-date'
+        clockFormatWrapper.className = "MyDigiClock-face"; // Class for clock format
+        timeWrapper.className = "MyDigiClock-time"; // Class for time display
+        clockBackground.className = "MyDigiClock-background"; // Updated class for background text
 
         const now = moment();
         if (this.config.timezone) {
